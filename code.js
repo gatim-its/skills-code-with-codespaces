@@ -8,7 +8,7 @@ function extractAndCreateNumber(word) {
 // Function to get user input and calculate the sum
 function calculateSumOfNumbers() {
     // Get user input
-    const userInput = "four9one
+    const userInput = 'four9one
 bbzhsmnmtf8kftwosevenxfkssgrcjthree
 6pkkcddsixsixjgnjvdtjtwo
 4four45seven7nine7two
@@ -1007,7 +1007,7 @@ htsrn3qdbskfsd211
 tdbjsvfxv67htbpmfx
 6l
 pdzseightjvjxlhgjhrnz9zzjbcrktjc99
-fourzqlhcjksixthreejrl9";
+fourzqlhcjksixthreejrl9';
 
     // Split the input into an array of words
     const words = userInput.split('\n');
