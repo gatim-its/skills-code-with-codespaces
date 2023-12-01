@@ -1,18 +1,14 @@
-// Function to extract first and last digits from a word and create a two-digit number
-function extractDigitsAndCreateNumber(word) {
-    // Convert the word to a string to handle numbers
-    word = word.toString();
-    
-    // Get the first and last characters
+// Function to extract first and last digits and create a two-digit number
+function extractAndCreateNumber(word) {
     const firstDigit = word.charAt(0);
     const lastDigit = word.charAt(word.length - 1);
-
-    // Create a two-digit number by concatenating the first and last digits
     return parseInt(firstDigit + lastDigit);
 }
 
-// Get user input
-const userInput = "four9one
+// Function to get user input and calculate the sum
+function calculateSumOfNumbers() {
+    // Get user input
+    const userInput = "four9one
 bbzhsmnmtf8kftwosevenxfkssgrcjthree
 6pkkcddsixsixjgnjvdtjtwo
 4four45seven7nine7two
@@ -1011,17 +1007,28 @@ htsrn3qdbskfsd211
 tdbjsvfxv67htbpmfx
 6l
 pdzseightjvjxlhgjhrnz9zzjbcrktjc99
-fourzqlhcjksixthreejrl9"
+fourzqlhcjksixthreejrl9";
 
-// Split the text into words
-const words = userInput.split(/\s+/);
+    // Split the input into an array of words
+    const words = userInput.split('\n');
 
-// Process each word and create a two-digit number
-const result = words.map(word => extractDigitsAndCreateNumber(word));
+    // Initialize sum
+    let sum = 0;
 
-// Calculate the sum of the two-digit numbers
-const sum = result.reduce((acc, number) => acc + number, 0);
+    // Iterate through each word, extract and create numbers, and add to the sum
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i].trim();
 
-// Display the result and the sum on the console
-console.log("Result:", result);
-console.log("Sum of Two-Digit Numbers:", sum);
+        // Check if the word is not empty
+        if (word !== '') {
+            const number = extractAndCreateNumber(word);
+            sum += number;
+        }
+    }
+
+    // Print the sum
+    console.log("Sum of the numbers:", sum);
+}
+
+// Call the function to start the process
+calculateSumOfNumbers();
